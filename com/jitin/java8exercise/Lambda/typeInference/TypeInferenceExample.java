@@ -8,10 +8,10 @@ public class TypeInferenceExample {
 	public static void main(String[] args) {
 		StringLengthLambda stringLength1 = (String str) -> str.length();
 		System.out.println(stringLength1.getLength("TypeInferenceExample"));
-
+		//--Don't need to specify the type.
 		StringLengthLambda stringLength2 = (str) -> str.length();
 		System.out.println(stringLength2.getLength("TypeInferenceExample"));
-
+		//--Don't need to enclose within parentheses when you have single object. 
 		StringLengthLambda stringLength3 = str -> str.length();
 		System.out.println(stringLength3.getLength("TypeInferenceExample"));
 		
@@ -25,18 +25,18 @@ public class TypeInferenceExample {
 		addLambda2.add(10, 20);
 
 		// --CalculateLambda Test
-		CalculateLambda CalculateLambda1 = (int a, int b, String operation) -> System.out
+		CalculateLambda calculateLambda1 = (int a, int b, String operation) -> System.out
 				.println(operation + " : " + (a * b));
-		CalculateLambda1.calculate(5, 6, "Multiplication");
+		calculateLambda1.calculate(5, 6, "Multiplication");
 
-		CalculateLambda CalculateLambda2 = (a, b, operation) -> System.out.println(operation + " : " + (a * b));
-		CalculateLambda2.calculate(4, 3, "Multiplication");
+		CalculateLambda calculateLambda2 = (a, b, operation) -> System.out.println(operation + " : " + (a * b));
+		calculateLambda2.calculate(4, 3, "Multiplication");
 
-		CalculateLambda CalculateLambda3 = (int a, int b, String operation) -> System.out
+		CalculateLambda calculateLambda3 = (int a, int b, String operation) -> System.out
 				.println(operation + " : " + (a / b));
-		CalculateLambda3.calculate(50, 10, "Division");
+		calculateLambda3.calculate(50, 10, "Division");
 
-		CalculateLambda CalculateLambda4 = (a, b, operation) -> {
+		CalculateLambda calculateLambda4 = (a, b, operation) -> {
 			switch (operation) {
 			case "Addition":
 				System.out.println(operation + " : " + (a + b));
@@ -59,11 +59,11 @@ public class TypeInferenceExample {
 				System.out.println("Oops!..Something went wrong while calculating!");
 			}
 		};
-		CalculateLambda4.calculate(80, 40, "Addition");
-		CalculateLambda4.calculate(80, 40, "Subtraction");
-		CalculateLambda4.calculate(20, 5, "Division");
-		CalculateLambda4.calculate(80, 0, "Division");
-		CalculateLambda4.calculate(30, 2, "Multiplication");
+		calculateLambda4.calculate(80, 40, "Addition");
+		calculateLambda4.calculate(80, 40, "Subtraction");
+		calculateLambda4.calculate(20, 5, "Division");
+		calculateLambda4.calculate(80, 0, "Division");
+		calculateLambda4.calculate(30, 2, "Multiplication");
 	}
 
 	interface StringLengthLambda {
