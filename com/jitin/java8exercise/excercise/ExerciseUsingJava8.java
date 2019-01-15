@@ -4,6 +4,8 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
+import com.jitin.java8exercise.common.Employee;
+
 public class ExerciseUsingJava8 {
 
 	private static void sortByName(List<Employee> employees) {

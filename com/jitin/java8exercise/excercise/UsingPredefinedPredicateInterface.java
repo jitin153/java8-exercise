@@ -5,6 +5,8 @@ import java.util.Collections;
 import java.util.List;
 import java.util.function.Predicate;
 
+import com.jitin.java8exercise.common.Employee;
+
 public class UsingPredefinedPredicateInterface {
 
 	private static void sortByName(List<Employee> employees) {

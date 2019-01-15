@@ -5,6 +5,8 @@ import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 
+import com.jitin.java8exercise.common.Employee;
+
 public class ExerciseUsingJava7 {
 
 	private static void sortByName(List<Employee> employees) {

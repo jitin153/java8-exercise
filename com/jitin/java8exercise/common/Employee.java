@@ -1,4 +1,4 @@
-package com.jitin.java8exercise.excercise;
+package com.jitin.java8exercise.common;
 
 public class Employee {
 	private Integer id;

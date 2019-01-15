@@ -6,6 +6,8 @@ import java.util.List;
 import java.util.function.Consumer;
 import java.util.function.Predicate;
 
+import com.jitin.java8exercise.common.Employee;
+
 public class UsingConsumerInterface {
 	private static void sortByName(List<Employee> employees) {
 		Collections.sort(employees, (emp1, emp2) -> emp1.getName().compareTo(emp2.getName()));
