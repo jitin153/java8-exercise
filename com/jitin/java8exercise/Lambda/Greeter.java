@@ -13,7 +13,7 @@ public class Greeter {
 	public static void greet(Greeting greeting) {
 		greeting.perform();
 	}
-	public static void greetLambda(greetInterface greetLambda) {
+	public static void greetLambda(GreetInterface greetLambda) {
 		greetLambda.foo();
 	}
 
@@ -22,7 +22,7 @@ public class Greeter {
 		greet(greeting);
 		greeting.perform();
 		// --Lambda Testing--
-		greetInterface greetLambda = () -> System.out.println("Hello Lambda");
+		GreetInterface greetLambda = () -> System.out.println("Hello Lambda");
 		greetLambda(() -> System.out.println("Hello Lambda"));
 		greetLambda(greetLambda);
 		
@@ -37,11 +37,13 @@ public class Greeter {
 				System.out.println("Hello from annonymous");
 			}
 		};
-		
+		/**
+		We can think labmda as shortcut for annonymous classes but its a different thing.
+		*/
 		greetingFromAnnonymous.perform();
 		greet(greetingFromAnnonymous);
 	}
 }
-interface greetInterface {
+interface GreetInterface {
 	void foo();
 }
